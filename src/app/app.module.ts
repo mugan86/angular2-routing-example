@@ -4,10 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 //Import app all components
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { DetailComponent } from './detail/detail.component'
-import { ContactComponent } from './contact/contact.component';
+import { AppComponent } from './components/app.component';
+import { HomeComponent } from './components/home/home.component';
+import { DetailComponent } from './components/detail/detail.component'
+import { ContactComponent } from './components/contact/contact.component';
 
 //Import routing configure file
 import { routing } from './app.routing';

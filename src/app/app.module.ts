@@ -7,10 +7,11 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { DetailComponent } from './detail/detail.component'
+import { ContactComponent } from './contact/contact.component';
 
 //Import routing configure file
 import { routing } from './app.routing';
-import { ContactComponent } from './contact/contact.component';
+
 
 @NgModule({
   declarations: [

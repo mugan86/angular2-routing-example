@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule, Http } from '@angular/http';
 
 //Import routing configure file
-import { routing } from './app.routing';
+import { Routing } from './app.routing';
 
 //Import app all components
 import { AppComponent } from './components/app.component';
@@ -25,7 +25,7 @@ import { LayoutComponent } from './components/layout/layout.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing // Import paths info
+    Routing // Import paths info
   ],
   providers: [Http],
   bootstrap: [AppComponent]

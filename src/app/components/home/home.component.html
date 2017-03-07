@@ -1,13 +1,14 @@
-<h3 class="titulo_home">
-    Hello, select "Home".
-</h3>
-
-
-
-<div class="container-fluid">    
+<div class="container-fluid">   
+    <div class="row content">
+        <div class="col-sm-12">
+            <h3 class="titulo_home">
+                Hello, select "Home".
+            </h3>
+            </div>
+    </div>
   <div class="row content">
         <div class="col-sm-4"> 
-        <p *ngIf="selectedHero">{{selectedHero.name}}</p>
+            <p *ngIf="selectedHero">{{selectedHero.name}}</p>
             <h2>My Heroes List</h2>
             <ul class="heroes">
                 <li *ngFor="let hero of heroes"

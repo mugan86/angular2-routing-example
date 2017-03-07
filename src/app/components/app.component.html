@@ -1,11 +1,12 @@
 <h1>
   {{title}}
 </h1>
- <nav>
+ <ul>
    <!--Add roterLink options to manage application in different components-->
-    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <li><a routerLink="/home" routerLinkActive="active">Home</a>
     <!--<a routerLink="/detail" routerLinkActive="active">Detail</a>-->
-    <a routerLink="/contact" routerLinkActive="active">Contact</a>
-  </nav>
+    <li><a routerLink="/layout" routerLinkActive="active">Layout</a>
+    <li><a routerLink="/contact" routerLinkActive="active">Contact</a>
+  </ul>
 
 <router-outlet></router-outlet>

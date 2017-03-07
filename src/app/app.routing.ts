@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { LayoutComponent } from './components/layout/layout.component';
 
 const appRoutes: Routes = [
         // take '/' route and send to 'home'
@@ -28,6 +29,11 @@ const appRoutes: Routes = [
     {
         path: 'contact',
         component:  ContactComponent
+    },
+    // route to detail component
+    {
+        path: 'layout',
+        component:  LayoutComponent
     },
 ];
 

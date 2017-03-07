@@ -10,12 +10,14 @@ import { DetailComponent } from './detail/detail.component'
 
 //Import routing configure file
 import { routing } from './app.routing';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DetailComponent
+    DetailComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

@@ -2,13 +2,23 @@
     Hello, select "Home".
 </h3>
 
-<my-hero-detail [hero]="selectedHero"></my-hero-detail>
-<p *ngIf="selectedHero">{{selectedHero.name}}</p>
-<h2>My Heroes List</h2>
-<ul class="heroes">
-    <li *ngFor="let hero of heroes"
-    [class.selected]="hero === selectedHero"
-    (click)="onSelect(hero)">
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
-    </li>
-</ul>
+
+
+<div class="container-fluid">    
+  <div class="row content">
+        <div class="col-sm-4"> 
+        <p *ngIf="selectedHero">{{selectedHero.name}}</p>
+            <h2>My Heroes List</h2>
+            <ul class="heroes">
+                <li *ngFor="let hero of heroes"
+                [class.selected]="hero === selectedHero"
+                (click)="onSelect(hero)">
+                <span class="badge">{{hero.id}}</span> {{hero.name}}
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-8 text-left"> 
+            <my-hero-detail [hero]="selectedHero"></my-hero-detail>
+        </div>
+    </div>
+</div>

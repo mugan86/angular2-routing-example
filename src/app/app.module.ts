@@ -15,11 +15,11 @@ import { LayoutComponent } from './components/layout/layout.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
     HomeComponent,
     DetailComponent,
     ContactComponent,
-    LayoutComponent
+    LayoutComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,

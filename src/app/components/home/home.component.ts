@@ -1,34 +1,47 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 //Import object Hero
 import { Hero } from './../../hero';
 
-//Create Hero object
+//Import Heroes List _heroesService
+import { HeroService } from './../../hero.service';
 
+//Create Hero object
+//File in ./..../hero.ts
 
 //Create array with heroes info
-const HEROES: Hero[] = [
-  { id: 11, name: 'Mr. Nice' },
-  { id: 12, name: 'Narco' },
-  { id: 13, name: 'Bombasto' },
-  { id: 14, name: 'Celeritas' },
-  { id: 15, name: 'Magneta' },
-  { id: 16, name: 'RubberMan' },
-  { id: 17, name: 'Dynama' },
-  { id: 18, name: 'Dr IQ' },
-  { id: 19, name: 'Magma' },
-  { id: 20, name: 'Tornado' }
-];
+//Using service, import correctly file 'hero.service' and add in 'providers'
+
 @Component({
   selector: 'home-component', // componentname
   templateUrl: './home.component.html', // url of view
-  styleUrls: ['./home.component.css'] // url component css
+  styleUrls: ['./home.component.css'], // url component css
+  providers: [HeroService]
 })
-export class HomeComponent {
-  heroes = HEROES;
+export class HomeComponent implements OnInit {
+
+    //When load this component, take HeroListService service info in getHeroes() function
+    ngOnInit(): void {
+      this.getHeroesList();
+    }
+  
+  //Initialize heroes variable to get heroes list array from service
+  public heroes : Hero[];
+
+  //To manage select hero info and show in components/detail/detail.component.html
   selectedHero: Hero;
 
+  //After select on item (hero), asign data in "selectHero" variable that Initialize in this class
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
+  }
+
+  //Create constructor to Initialize Inject HeroService
+  constructor(private _heroesService: HeroService) {}
+
+  //Call to hero.service.ts file in 'getHeroes()' function
+  getHeroesList()
+  {
+    this._heroesService.getHeroes().then((heroes: Hero[]) => this.heroes = heroes);
   }
 }

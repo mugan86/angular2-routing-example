@@ -26,4 +26,9 @@ const HEROES: Hero[] = [
 })
 export class HomeComponent {
   heroes = HEROES;
+  selectedHero: Hero;
+
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
 }

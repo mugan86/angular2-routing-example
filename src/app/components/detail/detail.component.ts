@@ -8,6 +8,8 @@ import { Hero } from './../../hero';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent {
+
+  //Get data from click action in home.component.html ngClick action in one item
   @Input()
   hero: Hero;
 }

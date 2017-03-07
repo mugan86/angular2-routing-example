@@ -2,9 +2,9 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // Import Home, Detail and Contact Component
-import { HomeComponent } from './home/home.component';
-import { DetailComponent } from './detail/detail.component';
-import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './components/home/home.component';
+import { DetailComponent } from './components/detail/detail.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 const appRoutes: Routes = [
         // take '/' route and send to 'home'

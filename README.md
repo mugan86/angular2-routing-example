@@ -3,7 +3,10 @@
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
 ## Instalation instructions
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+* Clone this repository: https://github.com/mugan86/angular2-routing-example.git
+* Access to angular2-routing-example directory.
+* Execute `npm install` to install this project all npm dependencies.
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

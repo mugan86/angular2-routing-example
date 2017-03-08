@@ -15,10 +15,12 @@
 }
 
 /* Set black background color, white text and some padding */
-footer {
+.footer {
     background-color: #555;
     color: white;
-    padding: 15px;
+}
+.footer ul{
+    background: none;
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid */
@@ -38,4 +40,10 @@ footer {
 {
     min-height: 100px;
     background-color: #555
+}
+
+.dropup
+{
+    overflow: none;
+    background: grey !important;
 }

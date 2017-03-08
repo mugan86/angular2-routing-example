@@ -1,0 +1,373 @@
+.navbarFagor {
+    background-color: #1e465a;
+    border-color: #98C0DA;
+    color: #98C0DA;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;  
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: Arial;
+}
+.navbar-collapse {
+    padding: 0;
+    margin: 0;
+}
+.navbarFagor .back-blue{
+  height: 100%; //para que el fondo ocupe hasta abajo
+  box-sizing: border-box;
+}
+
+.dropupz
+{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+}
+.dropupz li{
+  border-right: 1px solid #98C0DA;
+}
+.dropupz>li>a{  //lo he puesto con > xa que los submenús no tengan flex, xa la numeracion 
+  height: 100%; //para que al hacer hover el color del a vaya hasta abajo 
+  color: #98C0DA;
+  box-sizing: border-box; 
+}
+.dropupz li a .licontainer{  
+  height: 100%; //para que al hacer hover el color del a vaya hasta abajo
+  display: flex; //xa centrar la img   CUIDADO!!!!! Hay que mirar cuando hay texto  e imagen
+  flex-direction: column;
+  align-items: center;  //verticalmente
+  justify-content: center; //horizontalmente  
+}
+.dropupz .open>a>.licontainer{  //SI UN SUBMENU DE SUBMENÚ????? REVISAR!!! /*.dropupz li a:hover,*/
+  background-color: #98C0DA;
+  color: #1e465a;
+}
+.dropupz a:focus, .dropupz a:hover{
+    text-decoration: none;
+}
+.dropupz li a span{
+  //esto hay quew cambiar
+  font: 1vw Helvetica, Arial, sans-serif;
+  text-align: left;
+  /* align-self: flex-start;  faltaría tmb verticalmente al inicio*/
+}
+.dropupz li a img{ 
+  margin:0; //para flex xa centrarla 
+  margin-top: 4px; 
+}
+.dropupz .dropdown-menu
+ {
+  counter-reset: submenuItem-counter;
+  top: auto;
+  bottom: 100%;  
+  margin-bottom: 2px;
+  width: 100%;
+  background-color: #1e465a;    
+  color: #98C0DA;
+  padding: 0;  //para resetear un padding que hacía que arriba y abajo en el submenú hubiese espacio
+  box-sizing: border-box;
+}
+.dropupz .dropdown-menu>li{
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 40px;
+}
+
+.dropupz .dropdown-menu li a{  
+  counter-increment: submenuItem-counter;
+ // margin-bottom: 10px;
+  color: #98C0DA;
+  display: flex;  //para alinear horizontalmente el num li y el div licontainer
+  height: 100%;
+  min-height: 40px; 
+  padding: 0;
+}
+
+.dropupz .dropdown-menu li a::before {
+  content: counter(submenuItem-counter);
+  margin-right: 5px;
+  border: 5px solid #1e465a;
+  font-size: 80%;
+  background-color:#98C0DA;
+  color: #1e465a;
+  font-weight: bold;
+  //padding: 0 8px; 
+  height: 100%;
+  min-height: 40px;
+  min-width: 30px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.dropupz .dropdown-menu li a:hover::before {
+  content: url('http://localhost:8080/fagor/images/arrowRight.bmp');//'\25b6';
+  margin: 0 3px;
+  font-size: 98%;
+  background-color:#1e465a;
+  color: white;
+  font-weight: bold;
+  //padding: 0 8px;  
+  height: 100%;
+  min-height: 40px;
+  min-width: 10px;
+  vertical-align: middle;
+}
+.dropupz .dropdown-menu  li a .licontainer{  //lo he puesto con > xa que los submenús no tengan flex, xa la numeracion 
+  height: 100%; 
+  min-height: 40px;
+  display: flex; //xa centrar la img   CUIDADO!!!!! Hay que mirar cuando hay texto  e imagen
+  flex-direction: column;
+  align-items: center;  //verticalmente
+  justify-content: center; //horizontalmente  
+}
+
+.dropupz .dropdown-menu>li>a{
+  height: 100%;  
+  box-sizing: border-box;
+}
+.dropupz .dropdown-menu>li>a:hover{
+  background-color: #3c6478;
+  color: white;
+  border: 2px solid white;
+}
+
+.dropupz .dropdown-menu>li>a>img{  
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+.dropupz .caret {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 8px 8px 0;
+  border-color: transparent #98c0da transparent transparent;
+}
+
+.dropupz .open>a:focus .caret {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 8px 8px 0;
+  border-color: transparent #1e465a transparent transparent;
+  box-sizing: border-box;
+}
+
+.navbarFagor .back-blue2{
+  height: 100%; //para que el fondo ocupe hasta abajo
+  width: 100%;
+  }
+.dropleft{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+//necesario?
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+
+}
+.dropleft>li{
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #98C0DA;
+}
+.dropleft li a{
+  width: 100%; //para que al hacer hover el color del a vaya hasta abajo
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #98C0DA;
+  /*display: flex;
+  flex-direction: column;
+  align-items: center;  //verticalmente
+  justify-content: center; //horizontalmente*/
+}
+.dropleft li a .licontainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;  //verticalmente
+  justify-content: center; //horizontalmente
+  width: 100%; //para que al hacer hover el color del a vaya hasta abajo
+  height: 100%;
+}
+.dropleft .open>a>.licontainer{  //SI UN SUBMENU DE SUBMENÚ????? REVISAR!!! /*.dropleft li a:hover,*/
+  background-color: #98C0DA;
+  color: #1e465a;
+}
+
+.dropleft a:focus, .dropleft a:hover{
+    text-decoration: none;
+}
+.dropleft li a span{
+  //esto hay quew cambiar
+  font: 1vw Helvetica, Arial, sans-serif;
+  text-align: left;
+ // height: 20%;
+  align-self: flex-start; //faltaría arriba verticalmente
+}
+.dropleft li a img{ 
+  margin:0; //para flex xa centrarla  
+  //height: 80%;  
+}
+
+.dropleft .dropdown-menu {
+    counter-reset: submenuItem-counter;
+    background-color: #1e465a;    
+    color: #98C0DA;
+    position: absolute;
+    top:0;
+    left:auto;  //xa sobreescribir la clase por defecto dropdown-menu
+    right: 100%;  
+    margin: 0;
+    padding: 0;  
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.dropleft .dropdown-menu>li{
+  min-height: 30px;   
+  box-sizing: border-box;
+  width: 100%;
+}
+
+
+.dropleft .dropdown-menu li {
+  counter-increment: submenuItem-counter;
+  margin-bottom: 2px;
+}
+.dropleft .dropdown-menu li a::before {
+  content: counter(submenuItem-counter);
+  margin-right: 5px;
+  font-size: 100%;
+  background-color:#98C0DA;
+  color: #1e465a;
+  font-weight: bold;
+  //padding: 0 8px; 
+  height: 100%;
+  min-height: 40px;
+  min-width: 10px;
+ // vertical-align: -50%;
+  text-align: center;
+  display: inline-block;
+    vertical-align: middle;
+ // line-height: 130%;
+
+
+}
+
+.dropleft .dropdown-menu li a:hover::before {
+  //en la propuesta viene en números, no flecha.content: "\2192";//url(../../images/);
+  margin: 0 3px;
+  font-size: 80%;
+  background-color:#1e465a;
+  color: white;
+  font-weight: bold;
+  //padding: 0 8px;  
+  height: 100%;
+  min-height: 40px;
+  min-width: 10px;
+  
+}
+
+.dropleft .dropdown-menu>li>a{
+  height: 100%;  
+  width: 100%;
+  min-height: 30px; 
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.dropleft .dropdown-menu>li>a:hover{
+  background-color: #3c6478;
+  color: white;
+  border: 2px solid white;
+}
+
+.dropleft .dropdown-menu>li>a>img{  
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+.dropleft .caret {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 8px 0 0;
+  border-color: #98c0da transparent transparent transparent;
+}
+
+.dropleft .open>a:focus .caret {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 8px 0 0;
+  border-color: #1e465a transparent transparent transparent;
+  box-sizing: border-box;
+}
+
+
+.disable{
+    opacity: 0.1;
+    /*filter: alpha(opacity=40);*/ /* msie */
+    background-color: #000;
+    display: block;
+}
+
+.dropupz .axisItem, .dropleft .axisItem{
+  background-color: black;
+  margin: 5px 5px 5px 0;
+}
+
+
+
+
+/*.navbar-nav>li{   
+    text-align: center;
+    border-right: 1px solid #98C0DA;
+    height: 100%;*/
+   /* max-height: 140px;
+    min-height: 110px;*/
+//}
+
+/*.navbarFagor .navbar-nav span{
+     //font: 16px Helvetica, Arial, sans-serif;
+     // probando con la directiva fitText
+     font: 0.6vw Helvetica, Arial, sans-serif;
+     text-align: left;
+}*/
+ 
+/*.zoneMenuVertical .navbar-nav>li>a>img{
+	height: 40%;
+    width: 30%;
+ }
+
+.containerMenuHorizontal .navbar-nav>li>a>img{
+	height: 40%;
+    width: 15%;
+ }*/
+
+/*.navbar-nav>li>a>img{
+    max-width: 100%; /*Img resizable*/       
+/*}*/
+
+
+
+
+
+
+/*****************************************************/

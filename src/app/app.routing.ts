@@ -57,7 +57,7 @@ const appRoutes: Routes = [
     // route to bootstrap ui examples component
     {
         path: 'bootstrap-ui.tooltip',
-        component:  BootstrapUiAccordionComponent
+        component:  BootstrapUiTooltipComponent
     },
 ];
 

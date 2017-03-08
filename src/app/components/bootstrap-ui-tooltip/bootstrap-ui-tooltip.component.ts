@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bootstrap-ui-tooltip.component.css']
 })
 export class BootstrapUiTooltipComponent implements OnInit {
-
+  uiElementsHidden = [true, true, false];
   constructor() { }
 
   ngOnInit() {

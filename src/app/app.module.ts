@@ -17,6 +17,7 @@ import { BootstrapUiComponent } from './components/bootstrap-ui/bootstrap-ui.com
 import { BootstrapUiAccordionComponent } from './components/bootstrap-ui-accordion/bootstrap-ui-accordion.component';
 import { BootstrapUiModalComponent } from './components/bootstrap-ui-modal/bootstrap-ui-modal.component';
 import { BootstrapUiTooltipComponent } from './components/bootstrap-ui-tooltip/bootstrap-ui-tooltip.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { BootstrapUiTooltipComponent } from './components/bootstrap-ui-tooltip/b
     BootstrapUiComponent,
     BootstrapUiAccordionComponent,
     BootstrapUiModalComponent,
-    BootstrapUiTooltipComponent
+    BootstrapUiTooltipComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,28 @@
-<p>
-  bootstrap-ui-accordion works!
+ <p>
+  bootstrap-ui works!
 </p>
+<ul>
+  <li><a routerLink="/bootstrap-ui.accordion" routerLinkActive="active">Accordion</a>
+  <li><a routerLink="/bootstrap-ui.modal" routerLinkActive="active">Modal</a>
+  <li><a routerLink="/bootstrap-ui.tooltip" routerLinkActive="active">Tooltip</a>
+</ul>
+ <h1>Accordion example</h1>
+<accordion [closeOthers]="oneAtATime">
+  <accordion-group heading="Static Header, initially expanded">
+    This content is straight in the template.
+  </accordion-group>
+  <accordion-group #group>
+    <div accordion-heading>
+      I can have markup, too!
+      <i class="pull-right float-xs-right glyphicon"
+        [ngClass]="{'glyphicon-chevron-down': group?.isOpen, 'glyphicon-chevron-right': !group?.isOpen}"></i>
+    </div>
+    This is just some content to illustrate fancy headings.
+  </accordion-group>
+  <accordion-group heading="Content 1">
+    <p>Content 1</p>
+  </accordion-group>
+  <accordion-group heading="Content 2">
+    <p>Content 2</p>
+  </accordion-group>
+</accordion>

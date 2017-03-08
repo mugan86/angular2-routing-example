@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BootstrapUiModalComponent implements OnInit {
 
+  uiElementsHidden = [true, false, true];
   constructor() { }
 
   ngOnInit() {

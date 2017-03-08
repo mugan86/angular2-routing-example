@@ -14,6 +14,9 @@ import { DetailComponent } from './components/detail/detail.component'
 import { ContactComponent } from './components/contact/contact.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { BootstrapUiComponent } from './components/bootstrap-ui/bootstrap-ui.component';
+import { BootstrapUiAccordionComponent } from './components/bootstrap-ui-accordion/bootstrap-ui-accordion.component';
+import { BootstrapUiModalComponent } from './components/bootstrap-ui-modal/bootstrap-ui-modal.component';
+import { BootstrapUiTooltipComponent } from './components/bootstrap-ui-tooltip/bootstrap-ui-tooltip.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { BootstrapUiComponent } from './components/bootstrap-ui/bootstrap-ui.com
     ContactComponent,
     LayoutComponent,
     AppComponent,
-    BootstrapUiComponent
+    BootstrapUiComponent,
+    BootstrapUiAccordionComponent,
+    BootstrapUiModalComponent,
+    BootstrapUiTooltipComponent
   ],
   imports: [
     BrowserModule,

@@ -42,6 +42,11 @@ const appRoutes: Routes = [
         path: 'bootstrap-ui',
         component:  BootstrapUiComponent
     },
+    // route to bootstrap ui examples component
+    {
+        path: 'bootstrap-ui.accordion',
+        component:  HomeComponent
+    },
 ];
 
 export const Routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

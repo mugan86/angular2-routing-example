@@ -6,6 +6,8 @@ import { HomeComponent } from './components/home/home.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { BootstrapUiComponent } from './components/bootstrap-ui/bootstrap-ui.component';
+
 
 const appRoutes: Routes = [
         // take '/' route and send to 'home'
@@ -34,6 +36,11 @@ const appRoutes: Routes = [
     {
         path: 'layout',
         component:  LayoutComponent
+    },
+    // route to bootstrap ui examples component
+    {
+        path: 'bootstrap-ui',
+        component:  BootstrapUiComponent
     },
 ];
 

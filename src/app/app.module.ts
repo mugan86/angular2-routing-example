@@ -10,6 +10,9 @@ import  {HotkeysService, Hotkey} from 'angular2-hotkeys';*/
 //Import routing configure file
 import { Routing } from './app.routing';
 
+//Import directives
+import { StandOutBackgroundDirective} from './directives/standout.directive'
+
 //Import app all components
 import { AppComponent } from './components/app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -35,7 +38,8 @@ import { MenuComponent } from './components/menu/menu.component';
     BootstrapUiAccordionComponent,
     BootstrapUiModalComponent,
     BootstrapUiTooltipComponent,
-    MenuComponent
+    MenuComponent,
+    StandOutBackgroundDirective
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,10 @@
 import { Component, OnInit} from '@angular/core';
 
 //Import object Hero
-import { Hero } from './../../hero';
+import { Hero } from './../../models/hero';
 
 //Import Heroes List _heroesService
-import { HeroService } from './../../hero.service';
+import { HeroService } from './../../services/hero.service';
 
 //Create Hero object
 //File in ./..../hero.ts

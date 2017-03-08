@@ -4,10 +4,14 @@
             <h3 class="titulo_home">
                 Hello, select "Home".
             </h3>
-            </div>
+        </div>
     </div>
   <div class="row content">
-        <div class="col-sm-4"> 
+        
+        <div class="col-sm-10 text-left"> 
+            <my-hero-detail [hero]="selectedHero"></my-hero-detail>
+        </div>
+        <div class="col-sm-2"> 
             <p *ngIf="selectedHero">{{selectedHero.name}}</p>
             <h2>My Heroes List!</h2>
             <ul class="heroes">
@@ -17,9 +21,6 @@
                 <span class="badge">{{hero.id}}</span> {{hero.name}}
                 </li>
             </ul>
-        </div>
-        <div class="col-sm-8 text-left"> 
-            <my-hero-detail [hero]="selectedHero"></my-hero-detail>
         </div>
     </div>
 </div>

@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, Http } from '@angular/http';
 import { AccordionModule, ModalModule, TooltipModule  } from 'ng2-bootstrap';
+import { CommonModule } from '@angular/common'
+/*import {HotkeyModule} from 'angular2-hotkeys';
+import  {HotkeysService, Hotkey} from 'angular2-hotkeys';*/
 
 //Import routing configure file
 import { Routing } from './app.routing';
@@ -18,6 +21,8 @@ import { BootstrapUiAccordionComponent } from './components/bootstrap-ui-accordi
 import { BootstrapUiModalComponent } from './components/bootstrap-ui-modal/bootstrap-ui-modal.component';
 import { BootstrapUiTooltipComponent } from './components/bootstrap-ui-tooltip/bootstrap-ui-tooltip.component';
 import { MenuComponent } from './components/menu/menu.component';
+
+
 
 @NgModule({
   declarations: [
@@ -39,7 +44,9 @@ import { MenuComponent } from './components/menu/menu.component';
     Routing, // Import paths info
     AccordionModule.forRoot(),
     ModalModule.forRoot(),
-    TooltipModule .forRoot()
+    TooltipModule .forRoot(),
+    CommonModule,
+    //HotkeyModule.forRoot() //Exception
   ],
   providers: [Http],
   bootstrap: [AppComponent]

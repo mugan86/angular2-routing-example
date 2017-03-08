@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
+import {HotkeysService} from 'angular2-hotkeys';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'], 
+  providers: []
 })
 export class AppComponent {
   title = 'Example to Use Angular 2 and different routes';
+
+  
   computeTotal = (a,b) => a = a*b;  
   ngOnInit() {
     // here, write codes that will run soon as the child components are loaded

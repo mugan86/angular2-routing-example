@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, Http } from '@angular/http';
-import { AccordionModule } from 'ng2-bootstrap';
+import { AccordionModule, ModalModule } from 'ng2-bootstrap';
 
 //Import routing configure file
 import { Routing } from './app.routing';
@@ -29,7 +29,8 @@ import { BootstrapUiComponent } from './components/bootstrap-ui/bootstrap-ui.com
     FormsModule,
     HttpModule,
     Routing, // Import paths info
-    AccordionModule.forRoot()
+    AccordionModule.forRoot(),
+    ModalModule.forRoot()
   ],
   providers: [Http],
   bootstrap: [AppComponent]

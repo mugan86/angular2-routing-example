@@ -6,26 +6,39 @@
   <li><a routerLink="/bootstrap-ui.modal" routerLinkActive="active">Modal</a>
   <li><a routerLink="/bootstrap-ui.tooltip" routerLinkActive="active">Tooltip</a>
 </ul>
-<h1>Accordion example</h1>
-<accordion [closeOthers]="oneAtATime">
-  <accordion-group heading="Static Header, initially expanded">
-    This content is straight in the template.
-  </accordion-group>
-  <accordion-group #group>
-    <div accordion-heading>
-      I can have markup, too!
-      <i class="pull-right float-xs-right glyphicon"
-         [ngClass]="{'glyphicon-chevron-down': group?.isOpen, 'glyphicon-chevron-right': !group?.isOpen}"></i>
+<div class="row content">
+        
+        <div class="col-sm-12 text-left"> 
+            <ui-view></ui-view>
+        </div>
+
+</div>
+<!--<div class="row content">
+        
+        <div class="col-sm-12"> 
+            <h1>Accordion example</h1>
+            <accordion [closeOthers]="oneAtATime">
+              <accordion-group heading="Static Header, initially expanded">
+                This content is straight in the template.
+              </accordion-group>
+              <accordion-group #group>
+                <div accordion-heading>
+                  I can have markup, too!
+                  <i class="pull-right float-xs-right glyphicon"
+                    [ngClass]="{'glyphicon-chevron-down': group?.isOpen, 'glyphicon-chevron-right': !group?.isOpen}"></i>
+                </div>
+                This is just some content to illustrate fancy headings.
+              </accordion-group>
+              <accordion-group heading="Content 1">
+                <p>Content 1</p>
+              </accordion-group>
+              <accordion-group heading="Content 2">
+                <p>Content 2</p>
+              </accordion-group>
+            </accordion>
+        </div>
     </div>
-    This is just some content to illustrate fancy headings.
-  </accordion-group>
-  <accordion-group heading="Content 1">
-    <p>Content 1</p>
-  </accordion-group>
-  <accordion-group heading="Content 2">
-    <p>Content 2</p>
-  </accordion-group>
-</accordion>
+
 
 <h1>Modal example (static)</h1>
 
@@ -49,10 +62,10 @@
   </div>
 </div>
 
-<h1> Modal with different size</h1>
+<h1> Modal with different size</h1>-->
 
 <!--Large modal-->
-<button class="btn btn-primary" (click)="lgModal.show()">Large modal</button>
+<!--<button class="btn btn-primary" (click)="lgModal.show()">Large modal</button>
  
 <div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -68,11 +81,11 @@
       </div>
     </div>
   </div>
-</div>
+</div>-->
  
  
 <!--Small modal-->
-<button type="button" class="btn btn-primary" (click)="smModal.show()">Small modal</button>
+<!--<button type="button" class="btn btn-primary" (click)="smModal.show()">Small modal</button>
  
 <div bsModal #smModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
@@ -94,4 +107,4 @@
 <button type="button" class="btn btn-info"
         tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
     I have component level styling
-</button>
+</button>-->

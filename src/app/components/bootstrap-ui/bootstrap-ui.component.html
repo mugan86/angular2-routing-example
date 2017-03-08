@@ -2,7 +2,7 @@
   bootstrap-ui works!
 </p>
 <h1>Accordion example</h1>
-<accordion>
+<accordion [closeOthers]="oneAtATime">
   <accordion-group heading="Static Header, initially expanded">
     This content is straight in the template.
   </accordion-group>
@@ -21,3 +21,66 @@
     <p>Content 2</p>
   </accordion-group>
 </accordion>
+
+<h1>Modal example (static)</h1>
+
+<button type="button" class="btn btn-primary" (click)="staticModal.show()">Static modal</button>
+ 
+<div class="modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}"
+     tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Static modal</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        This is static modal, backdrop click will not close it.
+        Click <b>&times;</b> to close modal.
+      </div>
+    </div>
+  </div>
+</div>
+
+<h1> Modal with different size</h1>
+
+<!--Large modal-->
+<button class="btn btn-primary" (click)="lgModal.show()">Large modal</button>
+ 
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Large modal</h4>
+        <button type="button" class="close pull-right" (click)="lgModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+    </div>
+  </div>
+</div>
+ 
+ 
+<!--Small modal-->
+<button type="button" class="btn btn-primary" (click)="smModal.show()">Small modal</button>
+ 
+<div bsModal #smModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Small modal</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="smModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+    </div>
+  </div>
+</div>

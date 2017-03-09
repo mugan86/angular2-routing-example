@@ -1,10 +1,16 @@
+
+//Observable import to make server request in services
+import { Observable } from 'rxjs/Rx';
 import { Component, OnInit} from '@angular/core';
 
 //Import object Hero
 import { Hero } from './../../models/hero';
 
+
 //Import Heroes List _heroesService
 import { HeroService } from './../../services/hero.service';
+//import { SpotifyService } from './../../services/spotify.service';
+
 
 //Create Hero object
 //File in ./..../hero.ts
@@ -16,14 +22,15 @@ import { HeroService } from './../../services/hero.service';
   selector: 'home-component', // componentname
   templateUrl: './home.component.html', // url of view
   styleUrls: ['./home.component.css'], // url component css
-  providers: [HeroService]
+  providers: [HeroService/*, SpotifyService*/]
 })
 export class HomeComponent implements OnInit {
 
-    //When load this component, take HeroListService service info in getHeroes() function
-    ngOnInit(): void {
-      this.getHeroesList();
-    }
+  //When load this component, take HeroListService service info in getHeroes() function
+  ngOnInit(): void {
+    this.getHeroesList();
+    //this.getSelectArtistData();
+  }
   
   //Initialize heroes variable to get heroes list array from service
   public heroes : Hero[];
@@ -37,11 +44,17 @@ export class HomeComponent implements OnInit {
   }
 
   //Create constructor to Initialize Inject HeroService
-  constructor(private _heroesService: HeroService) {}
+  constructor(private _heroesService: HeroService/*, private _spotifyService:SpotifyService*/) {}
 
   //Call to hero.service.ts file in 'getHeroes()' function
   getHeroesList()
   {
     this._heroesService.getHeroes().then((heroes: Hero[]) => this.heroes = heroes);
   }
+
+  /*getSelectArtistData()
+  {
+    this._spotifyService.getArtistBasicData("su ta gar")
+    .subscribe(data => console.log(data));
+  }*/
 }

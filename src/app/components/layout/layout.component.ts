@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CreditCardMaskPipe } from './../../pipes/credit-card-mask.pipe';
 
 @Component({
   selector: 'app-layout',
@@ -7,6 +6,7 @@ import { CreditCardMaskPipe } from './../../pipes/credit-card-mask.pipe';
   styleUrls: ['./layout.component.css'],
   providers: []
 })
+
 export class LayoutComponent implements OnInit {
 
   constructor() { }

@@ -28,6 +28,7 @@ import { MenuComponent } from './components/menu/menu.component';
 
 //Import Pipes
 import { CreditCardMaskPipe } from './pipes/credit-card-mask.pipe';
+import { FirstFourCharsOnlyPipe } from './pipes/first-four.chars.pipe';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { CreditCardMaskPipe } from './pipes/credit-card-mask.pipe';
     BootstrapUiTooltipComponent,
     MenuComponent,
     StandOutBackgroundDirective,
-    CreditCardMaskPipe
+    CreditCardMaskPipe,
+    FirstFourCharsOnlyPipe
   ],
   imports: [
     BrowserModule,

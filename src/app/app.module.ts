@@ -26,6 +26,9 @@ import { BootstrapUiTooltipComponent } from './components/bootstrap-ui-tooltip/b
 import { MenuComponent } from './components/menu/menu.component';
 
 
+//Import Pipes
+import { CreditCardMaskPipe } from './pipes/credit-card-mask.pipe';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +42,8 @@ import { MenuComponent } from './components/menu/menu.component';
     BootstrapUiModalComponent,
     BootstrapUiTooltipComponent,
     MenuComponent,
-    StandOutBackgroundDirective
+    StandOutBackgroundDirective,
+    CreditCardMaskPipe
   ],
   imports: [
     BrowserModule,
@@ -51,6 +55,7 @@ import { MenuComponent } from './components/menu/menu.component';
     TooltipModule .forRoot(),
     CommonModule,
     //HotkeyModule.forRoot() //Exception
+    
   ],
   providers: [Http],
   bootstrap: [AppComponent]

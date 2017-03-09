@@ -45,7 +45,7 @@ import { FirstFourCharsOnlyPipe } from './pipes/first-four.chars.pipe';
     MenuComponent,
     StandOutBackgroundDirective,
     CreditCardMaskPipe,
-    FirstFourCharsOnlyPipe
+    FirstFourCharsOnlyPipe,
   ],
   imports: [
     BrowserModule,

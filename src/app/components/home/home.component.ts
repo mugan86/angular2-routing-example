@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
   }
 
   //Create constructor to Initialize Inject HeroService
-  constructor(private _heroesService: HeroService/*, private _spotifyService:SpotifyService*/) {}
+  constructor(public _heroesService: HeroService/*, public _spotifyService:SpotifyService*/) {}
 
   //Call to hero.service.ts file in 'getHeroes()' function
   getHeroesList()
@@ -52,7 +52,7 @@ export class HomeComponent implements OnInit {
     this._heroesService.getHeroes().then((heroes: Hero[]) => this.heroes = heroes);
   }
 
-  /*getSelectArtistData()
+ /*getSelectArtistData()
   {
     this._spotifyService.getArtistBasicData("su ta gar")
     .subscribe(data => console.log(data));

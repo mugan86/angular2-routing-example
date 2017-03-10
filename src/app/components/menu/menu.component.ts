@@ -12,6 +12,9 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
   }
 
-  computeTotal = (a,b) => console.info("djdjdjd");
+  computeTotal (a,b): string
+  {
+    return "";
+  }
 
 }

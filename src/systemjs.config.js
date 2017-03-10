@@ -60,6 +60,10 @@
         main: './main.ts',
         defaultExtension: 'ts'
       },
+      'app/components/translate': {
+        main: 'index.ts', 
+        defaultExtension: 'ts'
+      },
       rxjs: {
         defaultExtension: 'js'
       }

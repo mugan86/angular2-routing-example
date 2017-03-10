@@ -25,11 +25,9 @@ import { BootstrapUiModalComponent } from './components/bootstrap-ui-modal/boots
 import { BootstrapUiTooltipComponent } from './components/bootstrap-ui-tooltip/bootstrap-ui-tooltip.component';
 import { MenuComponent } from './components/menu/menu.component';
 
-
 //Import Pipes
 import { CreditCardMaskPipe } from './pipes/credit-card-mask.pipe';
 import { FirstFourCharsOnlyPipe } from './pipes/first-four.chars.pipe';
-
 
 @NgModule({
   declarations: [
